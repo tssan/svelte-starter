@@ -18,7 +18,6 @@
     let page;
 
     const pageComponent = router.getComponent() || NotFound;
-    console.log('??', pageComponent)
 </script>
 
 

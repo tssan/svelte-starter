@@ -1,6 +1,8 @@
-# Install
+# Quick start
 
 ```bash
+npx degit tssan/svelte-starter myproject
+cd myproject
 npm i
 ```
 
