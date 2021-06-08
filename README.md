@@ -15,9 +15,3 @@ npm run dev
 ```bash
 npm run build
 ```
-
-## Single-page app mode
-
-```js
-"start": "sirv public --single"
-```

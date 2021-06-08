@@ -1,3 +1,5 @@
-<main>
-	<h1>Hello world!</h1>
-</main>
+<script>
+	import Router from "./Router.svelte";
+</script>
+
+<Router />
