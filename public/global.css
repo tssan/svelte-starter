@@ -1,2 +1,284 @@
+:root {
+    /* screen sizes */
+    --screen-xs: 480px;
+    --screen-sm: 768px;
+    --screen-md: 992px;
+    --screen-lg: 1200px;
+    --screen-xl: 1600px;
+
+    /* colors */
+    --primary-light-5: #f3f9fa;
+    --primary-light-4: #d6ecee;
+    --primary-light-3: #aed9de;
+    --primary-light-2: #85c6cd;
+    --primary-light-1: #5db3bd;
+    --primary: #4297a0;
+    --primary-dark-1: #3b878f;
+    --primary-dark-2: #34787f;
+    --primary-dark-3: #2e6970;
+    --primary-dark-4: #275a60;
+    --primary-dark-5: #214b50;
+
+    --secondary-light-5: #fefefe;
+    --secondary-light-4: #fdfbfa;
+    --secondary-light-3: #fbf7f5;
+    --secondary-light-2: #f8f2f0;
+    --secondary-light-1: #f6eeeb;
+    --secondary: #f4eae6;
+    --secondary-dark-1: #e6cec5;
+    --secondary-dark-2: #d7b3a4;
+    --secondary-dark-3: #c99783;
+    --secondary-dark-4: #ba7b62;
+    --secondary-dark-5: #a56348;
+
+    --success-light-5: #f4f9f5;
+    --success-light-4: #d9ecdf;
+    --success-light-3: #b3d9be;
+    --success-light-2: #8dc69e;
+    --success-light-1: #67b27e;
+    --success: #4b9662;
+    --success-dark-1: #448658;
+    --success-dark-2: #3c774e;
+    --success-dark-3: #356844;
+    --success-dark-4: #2d5a3a;
+    --success-dark-5: #264b31;
+
+    --warning-light-5: #fcfcf2;
+    --warning-light-4: #f5f3d2;
+    --warning-light-3: #eae8a6;
+    --warning-light-2: #e0dc79;
+    --warning-light-1: #d5d14d;
+    --warning: #bfba2d;
+    --warning-dark-1: #aba728;
+    --warning-dark-2: #989424;
+    --warning-dark-3: #85821f;
+    --warning-dark-4: #726f1b;
+    --warning-dark-5: #5f5d16;
+
+    --danger-light-5: #fdf7f8;
+    --danger-light-4: #fae6e7;
+    --danger-light-3: #f5ccce;
+    --danger-light-2: #efb3b6;
+    --danger-light-1: #ea999d;
+    --danger: #e57f84;
+    --danger-dark-1: #df6269;
+    --danger-dark-2: #d9454c;
+    --danger-dark-3: #cf2a33;
+    --danger-dark-4: #b2242b;
+    --danger-dark-5: #941e24;
+
+    --info-light-5: #f0f5f8;
+    --info-light-4: #cddfe7;
+    --info-light-3: #9cbecf;
+    --info-light-2: #6a9eb7;
+    --info-light-1: #467992;
+    --info: #2f5061;
+    --info-dark-1: #2a4857;
+    --info-dark-2: #25404d;
+    --info-dark-3: #203843;
+    --info-dark-4: #1c303a;
+    --info-dark-5: #172830;
+}
+
+
 /* Reset styles - minimal */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    color: #252525;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Verdana, sans-serif;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+p {
+    padding: 5px;
+}
+
+form {
+    font-family: Verdana, sans-serif;
+}
+form label {
+    font-size: 0.7rem;
+}
+
+input,
+input[type="radio"],
+input[type="checkbox"],
+select option,
+select,
+textarea
+{
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+
+    background-color: var(--primary-light-5);
+    border: 1px solid var(--primary-light-1);
+    color: var(--primary-dark-5);
+}
+
+input:focus,
+textarea:focus,
+select:focus
+{
+    outline: 0;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+form input[type="text"],
+form input[type="password"],
+form select
+{
+    width: 100%;
+    padding: 12px 8px;
+    margin-bottom: 0.5rem;
+}
+
+form input[type="radio"],
+form input[type="checkbox"]
+{
+    vertical-align: middle;
+}
+
+form textarea {
+    width: 100%;
+    padding: 12px 8px;
+    margin-bottom: 0.5rem;
+}
+
+form .input-group {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+form .input-group span.label {
+    font-size: 0.7rem;
+    width: 100%;
+    display: block;
+}
+
+form .input-group-inline {
+    display: flex;
+    flex-direction: column;
+}
+form .input-group-inline .input-group {
+    margin-bottom: 0;
+}
+@media only screen and (min-width: 480px) {
+    form .input-group-inline {
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 6px;
+    }
+}
+
+form button,
+form .btn
+{
+    display: inline-block;
+    background-color: var(--info-light-4);
+    border: 1px solid var(--info-light-1);
+    color: var(--info-dark-5);
+    padding: 12px 8px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+form .btn-primary {
+    background-color: var(--primary);
+    border: 1px solid var(--primary-dark-5);
+    color: var(--primary-light-5);
+}
+form .btn-secondary {
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary-dark-5);
+    color: var(--secondary-dark-5);
+}
+form .btn-success {
+    background-color: var(--success);
+    border: 1px solid var(--success-dark-5);
+    color: var(--success-light-5);
+}
+form .btn-warning {
+    background-color: var(--warning);
+    border: 1px solid var(--warning-dark-5);
+    color: var(--warning-dark-5);
+}
+form .btn-danger {
+    background-color: var(--danger);
+    border: 1px solid var(--danger-dark-5);
+    color: var(--danger-light-5);
+}
+form .btn-info {
+    background-color: var(--info);
+    border: 1px solid var(--info-dark-5);
+    color: var(--info-light-5);
+}
+
+form .btn:focus,
+form .btn:active
+{
+    outline: 0;
+}
+
+form button:hover,
+form .btn:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.1);
+}
+
+form .btn-full {
+    width: 100%;
+}
+
+form .btn i {
+    margin-right: 10px;
+}
+
+form .input-group-icon {
+    width: 100%;
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+form .input-group-icon i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-light-5);
+    border: 1px solid var(--primary-light-1);
+    border-right: 0;
+    color: var(--primary-dark-5);
+    width: 50px;
+}
+
+form .input-group-icon input {
+    margin-bottom: 0px;
+}
+
+form ul.input-errors {
+    font-size: 0.7rem;
+    list-style: none;
+}
+form ul.input-errors li {
+    background-color: var(--danger);
+    color: var(--danger-light-5);
+    padding: 5px 5px;
+    margin: 1px;
+}

@@ -1,6 +1,8 @@
 <script context="module">
     const routes = [
-        { url: '^/?$', component: Index, name: 'home' },
+        { url: '^/?$', component: Index},
+        { url: '^example/?$', component: PageExample},
+        { url: '^login/?$', component: Login},
     ];
 
     export const router = new Router(routes);
@@ -14,8 +16,8 @@
     // pages
     import NotFound from './NotFound.svelte';
     import Index from './pages/Index.svelte';
-
-    let page;
+    import PageExample from './pages/PageExample.svelte';
+    import Login from './pages/Login.svelte';
 
     const pageComponent = router.getComponent() || NotFound;
 </script>

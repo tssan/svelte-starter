@@ -7,10 +7,6 @@ class Router {
         return this.getRoute('component');
     }
 
-    getSegment = () => {
-        return this.getRoute('name');
-    }
-
     getRoute = (key) => {
         for(const route of this.routes) {
             const re = new RegExp(route.url);
